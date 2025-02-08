@@ -20,6 +20,17 @@ def get_current_user() -> Optional[User]:
     return None  # No valid user found
 
 
+# def get_current_user() -> Optional[User]:
+#     # Simulate authentication logic
+#     token = "SomeToken"  # <<<<<<< ADDED: Simulate a token for testing
+#     if token:  # Validate and decode the token here
+#         # Return a hardcoded user for testing
+#         return User(
+#             id=1, name="John Doe", email="john.doe@example.com"
+#         )  # <<<<<<< ADDED
+#     return None  # No valid user found
+
+
 @api_router.get("/", status_code=200)
 def root() -> dict:
     """
